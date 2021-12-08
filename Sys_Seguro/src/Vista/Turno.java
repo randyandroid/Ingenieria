@@ -4,12 +4,25 @@
  */
 package Vista;
 
+import Modelo.DbConexion;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Matias
  */
 public class Turno extends javax.swing.JFrame {
 
+PreparedStatement ps;
+ResultSet Res;
+
+
+    
+    
+    
     /**
      * Creates new form Paciente
      */
@@ -29,13 +42,13 @@ public class Turno extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
+        PacNom = new javax.swing.JTextField();
+        MedNom = new javax.swing.JTextField();
+        MedEsp = new javax.swing.JTextField();
+        FechTur = new javax.swing.JTextField();
+        HorTur = new javax.swing.JTextField();
+        MonCon = new javax.swing.JTextField();
+        CodTur = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -43,6 +56,13 @@ public class Turno extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        NumTur = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        LisTur = new javax.swing.JTable();
+        GuaTur = new javax.swing.JButton();
+        BusTur = new javax.swing.JButton();
+        IdTurno = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,59 +76,59 @@ public class Turno extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 57, -1));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        PacNom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                PacNomActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 150, 30));
+        jPanel1.add(PacNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 150, 30));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        MedNom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                MedNomActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 150, 30));
+        jPanel1.add(MedNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 150, 30));
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        MedEsp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                MedEspActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 150, 30));
+        jPanel1.add(MedEsp, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 150, 30));
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        FechTur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                FechTurActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 150, 30));
+        jPanel1.add(FechTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 150, 30));
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        HorTur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                HorTurActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 150, 30));
+        jPanel1.add(HorTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 150, 30));
 
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        MonCon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                MonConActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 150, 30));
+        jPanel1.add(MonCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 150, 30));
 
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        CodTur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                CodTurActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 150, 30));
+        jPanel1.add(CodTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 150, 30));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Número Turrno:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 100, 20));
+        jLabel2.setText("Codigo del Turno");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 100, 20));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
@@ -140,19 +160,70 @@ public class Turno extends javax.swing.JFrame {
         jLabel8.setText("Hora:");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 50, 20));
 
+        jLabel9.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setText("Número Turrno:");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 100, 20));
+
+        NumTur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumTurActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NumTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 150, 30));
+
+        LisTur.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Cod", "Numero", "Paciente", "Medico", "Especialidad", "Hora", "Dia"
+            }
+        ));
+        jScrollPane1.setViewportView(LisTur);
+        if (LisTur.getColumnModel().getColumnCount() > 0) {
+            LisTur.getColumnModel().getColumn(0).setPreferredWidth(40);
+        }
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 490, 90));
+
+        GuaTur.setText("Guardar");
+        GuaTur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GuaTurActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GuaTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, -1, -1));
+
+        BusTur.setText("Buscar");
+        BusTur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BusTurActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BusTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 440, 90, -1));
+
+        IdTurno.setEditable(false);
+        jPanel1.add(IdTurno, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 60, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 802, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -164,33 +235,134 @@ public class Turno extends javax.swing.JFrame {
            dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void PacNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PacNomActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_PacNomActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void MedNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MedNomActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_MedNomActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void MedEspActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MedEspActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_MedEspActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void FechTurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FechTurActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_FechTurActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void HorTurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HorTurActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_HorTurActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void MonConActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MonConActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_MonConActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void CodTurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CodTurActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_CodTurActionPerformed
+
+    private void NumTurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumTurActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NumTurActionPerformed
+
+    private void GuaTurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuaTurActionPerformed
+        // TODO add your handling code here:
+        
+          Connection Conexion = null;
+          DbConexion obj = new DbConexion();
+          
+        try{
+            
+            Conexion = obj.getConexion();
+            ps = Conexion.prepareStatement("INSERT INTO Turnos(Codigo,Numero,Paciente,Medico,Especialidad,Fecha,Hora,Monto) VALUES (?,?,?,?,?,?,?,?)");
+            ps.setString(1,CodTur.getText());
+            ps.setString(2,NumTur.getText());
+            ps.setString(3,PacNom.getText());
+            ps.setString(4,MedNom.getText());
+            ps.setString(5,MedEsp.getText());
+            ps.setString(6,FechTur.getText());
+            ps.setString(7,HorTur.getText());
+            ps.setString(8,MonCon.getText());
+            
+            
+           int res =  ps.executeUpdate();
+           
+           if(res>0){
+               
+               JOptionPane.showMessageDialog(null, "TURNO GUARDADO. ");
+               //Limpiar();
+               
+           }else{
+               JOptionPane.showMessageDialog(null, "ERROR AL GUARDAR. ");
+           }
+            
+            Conexion.close();
+            
+            
+            
+        }catch(Exception e){
+            
+            JOptionPane.showMessageDialog(null, e);
+        }
+        
+        
+        
+        
+        
+    }                                            
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_GuaTurActionPerformed
+
+    private void BusTurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BusTurActionPerformed
+        // TODO add your handling code here:
+        
+        Connection Conexion = null;
+        DbConexion obj = new DbConexion();
+        
+        try{
+
+            Conexion = obj.getConexion();
+
+            ps = Conexion.prepareStatement("SELECT *FROM Turnos WHERE Codigo = ? OR Paciente = ? OR Numero = ?");
+            ps.setString(1, CodTur.getText());
+            ps.setString(2, PacNom.getText());
+            ps.setString(3, NumTur.getText());
+            
+            Res = ps.executeQuery();
+
+            if(Res.next()){
+
+                IdTurno.setText(Res.getString("idTurnos"));
+                CodTur.setText(Res.getString("Codigo"));
+                NumTur.setText(Res.getString("Numero"));
+                PacNom.setText(Res.getString("Paciente"));
+                MedNom.setText(Res.getString("Medico"));
+                MedEsp.setText(Res.getString("Especialidad"));
+                FechTur.setText(Res.getString("Fecha"));
+                HorTur.setText(Res.getString("Hora"));
+                MonCon.setText(Res.getString("Monto"));
+                
+            }else{
+
+                JOptionPane.showMessageDialog(null, "No existe Medico asociado a ese codigo");
+
+            }
+
+        }catch(Exception e){
+
+            JOptionPane.showMessageDialog(null, e);
+        }
+
+        
+        
+        
+    }//GEN-LAST:event_BusTurActionPerformed
 
     /**
      * @param args the command line arguments
@@ -229,6 +401,18 @@ public class Turno extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BusTur;
+    private javax.swing.JTextField CodTur;
+    private javax.swing.JTextField FechTur;
+    private javax.swing.JButton GuaTur;
+    private javax.swing.JTextField HorTur;
+    private javax.swing.JTextField IdTurno;
+    private javax.swing.JTable LisTur;
+    private javax.swing.JTextField MedEsp;
+    private javax.swing.JTextField MedNom;
+    private javax.swing.JTextField MonCon;
+    private javax.swing.JTextField NumTur;
+    private javax.swing.JTextField PacNom;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -237,13 +421,8 @@ public class Turno extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
