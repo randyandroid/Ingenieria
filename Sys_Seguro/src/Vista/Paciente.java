@@ -444,8 +444,9 @@ ResultSet Res;
 
             Conexion = obj.getConexion();
 
-            ps = Conexion.prepareStatement("SELECT *FROM PACIENTES WHERE Codigo = ?");
+            ps = Conexion.prepareStatement("SELECT *FROM PACIENTES WHERE Codigo = ? OR Nombres = ?");
             ps.setString(1, CodPac.getText());
+             ps.setString(2, NomPac.getText());
             Res = ps.executeQuery();
 
             if(Res.next()){
