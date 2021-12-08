@@ -434,7 +434,7 @@ public void Limpiar(){
 
             ps = Conexion.prepareStatement("SELECT *FROM Medicos WHERE Codigo = ? OR Nombres = ?");
             ps.setString(1, CodMed.getText());
-            ps.setString(3, NomMed.getText());
+            ps.setString(2, NomMed.getText());
             Res = ps.executeQuery();
 
             if(Res.next()){
