@@ -20,6 +20,8 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -32,58 +34,74 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jProgressBar1 = new javax.swing.JProgressBar();
-        btnEntLog = new javax.swing.JButton();
+        FondoLogin = new javax.swing.JPanel();
         UsuLog = new javax.swing.JTextField();
-        PwdLog = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
+        PwdLog = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
+        btnEntLog = new javax.swing.JButton();
+        Salir = new javax.swing.JButton();
+        Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
+        FondoLogin.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        UsuLog.setBackground(new java.awt.Color(255, 255, 255));
+        UsuLog.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        UsuLog.setForeground(new java.awt.Color(0, 0, 0));
+        FondoLogin.add(UsuLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 180, -1));
+
+        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Usuario:");
+        FondoLogin.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 90, 20));
+
+        PwdLog.setBackground(new java.awt.Color(255, 255, 255));
+        PwdLog.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        PwdLog.setForeground(new java.awt.Color(0, 0, 0));
+        FondoLogin.add(PwdLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, 180, -1));
+
+        jLabel2.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Contraseña:");
+        FondoLogin.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, -1, -1));
+
+        btnEntLog.setBackground(new java.awt.Color(255, 255, 255));
+        btnEntLog.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        btnEntLog.setForeground(new java.awt.Color(0, 0, 0));
         btnEntLog.setText("Iniciar");
         btnEntLog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEntLogActionPerformed(evt);
             }
         });
+        FondoLogin.add(btnEntLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, 90, 30));
 
-        jLabel1.setText("usuario");
+        Salir.setBackground(new java.awt.Color(255, 255, 255));
+        Salir.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        Salir.setForeground(new java.awt.Color(0, 0, 0));
+        Salir.setText("Salir");
+        Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirActionPerformed(evt);
+            }
+        });
+        FondoLogin.add(Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 90, 30));
 
-        jLabel2.setText("Password");
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/640-pastillas-de-medicina-sobre-fondo-azul.jpg"))); // NOI18N
+        FondoLogin.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, -4, 640, 390));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(UsuLog, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                    .addComponent(PwdLog))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(182, Short.MAX_VALUE)
-                .addComponent(btnEntLog, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(150, 150, 150))
+            .addComponent(FondoLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(UsuLog, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PwdLog, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(64, 64, 64)
-                .addComponent(btnEntLog)
-                .addContainerGap(92, Short.MAX_VALUE))
+            .addComponent(FondoLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -108,6 +126,7 @@ public class Login extends javax.swing.JFrame {
         
            Inicio obj = new Inicio();
            obj.setVisible(true);
+           dispose();
                 
                 
             }else{
@@ -118,7 +137,12 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "los datos estan vacios");
         }
  
+          
     }//GEN-LAST:event_btnEntLogActionPerformed
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        dispose();
+    }//GEN-LAST:event_SalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,7 +180,10 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Fondo;
+    private javax.swing.JPanel FondoLogin;
     private javax.swing.JPasswordField PwdLog;
+    private javax.swing.JButton Salir;
     private javax.swing.JTextField UsuLog;
     private javax.swing.JButton btnEntLog;
     private javax.swing.JLabel jLabel1;

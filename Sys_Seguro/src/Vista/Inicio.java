@@ -16,6 +16,7 @@ public class Inicio extends javax.swing.JFrame {
      */
     public Inicio() {
         initComponents();
+          this.setLocationRelativeTo(null);
     }
 
     /**
@@ -27,21 +28,199 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        Salir = new javax.swing.JButton();
+        Paciente = new javax.swing.JButton();
+        Disponibilidad = new javax.swing.JButton();
+        Administracion = new javax.swing.JButton();
+        Medico = new javax.swing.JButton();
+        ARS = new javax.swing.JButton();
+        Turnos = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        Fondo = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Salir.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        Salir.setForeground(new java.awt.Color(0, 0, 0));
+        Salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconosalir3.png"))); // NOI18N
+        Salir.setText("Salir");
+        Salir.setContentAreaFilled(false);
+        Salir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Salir.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconosalir.png"))); // NOI18N
+        Salir.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Iconosalirr2.png"))); // NOI18N
+        Salir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 560, 120, 110));
+
+        Paciente.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        Paciente.setForeground(new java.awt.Color(0, 0, 0));
+        Paciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Paciente2.png"))); // NOI18N
+        Paciente.setText("Paciente");
+        Paciente.setContentAreaFilled(false);
+        Paciente.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Paciente.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Paciente1.png"))); // NOI18N
+        Paciente.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Paciente3.png"))); // NOI18N
+        Paciente.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        Paciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PacienteActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Paciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 120, 130));
+
+        Disponibilidad.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        Disponibilidad.setForeground(new java.awt.Color(0, 0, 0));
+        Disponibilidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Disponibilidad2.png"))); // NOI18N
+        Disponibilidad.setText("Disponibilidad");
+        Disponibilidad.setContentAreaFilled(false);
+        Disponibilidad.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Disponibilidad.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Disponibilidad1.png"))); // NOI18N
+        Disponibilidad.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Disponibilidad 3.png"))); // NOI18N
+        Disponibilidad.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        Disponibilidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DisponibilidadActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Disponibilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 160, 130));
+
+        Administracion.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        Administracion.setForeground(new java.awt.Color(0, 0, 0));
+        Administracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/administracion 2.png"))); // NOI18N
+        Administracion.setText("Administración");
+        Administracion.setToolTipText("");
+        Administracion.setContentAreaFilled(false);
+        Administracion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Administracion.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/administracion 1.png"))); // NOI18N
+        Administracion.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Administracion 3.png"))); // NOI18N
+        Administracion.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        Administracion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AdministracionActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Administracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 200, 140));
+
+        Medico.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        Medico.setForeground(new java.awt.Color(0, 0, 0));
+        Medico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Medico2.png"))); // NOI18N
+        Medico.setText("Médico");
+        Medico.setContentAreaFilled(false);
+        Medico.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Medico.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Medico1.png"))); // NOI18N
+        Medico.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Medico3.png"))); // NOI18N
+        Medico.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        Medico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MedicoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Medico, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 120, 130));
+
+        ARS.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        ARS.setForeground(new java.awt.Color(0, 0, 0));
+        ARS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ARS2.png"))); // NOI18N
+        ARS.setText("ARS");
+        ARS.setContentAreaFilled(false);
+        ARS.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ARS.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ARS1.png"))); // NOI18N
+        ARS.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ARS3.png"))); // NOI18N
+        ARS.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ARS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ARSActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ARS, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 120, 130));
+
+        Turnos.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        Turnos.setForeground(new java.awt.Color(0, 0, 0));
+        Turnos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Cinta2.png"))); // NOI18N
+        Turnos.setText("Gestion Turnos");
+        Turnos.setToolTipText("");
+        Turnos.setContentAreaFilled(false);
+        Turnos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Turnos.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cinta1.png"))); // NOI18N
+        Turnos.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Cita3.png"))); // NOI18N
+        Turnos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        Turnos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TurnosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Turnos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 180, 130));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cooltext399528988127163.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 20, 650, 70));
+
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo menu.png"))); // NOI18N
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 680));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+    
+        
+        dispose();
+    }//GEN-LAST:event_SalirActionPerformed
+
+    private void DisponibilidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DisponibilidadActionPerformed
+       Disponibilidad DP = new Disponibilidad();
+           DP.setVisible(true);
+           dispose();
+    }//GEN-LAST:event_DisponibilidadActionPerformed
+
+    private void ARSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ARSActionPerformed
+      Ars Ar = new Ars();
+           Ar.setVisible(true);
+           dispose();
+    }//GEN-LAST:event_ARSActionPerformed
+
+    private void MedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MedicoActionPerformed
+       Medico ME = new Medico();
+           ME.setVisible(true);
+           dispose();
+    }//GEN-LAST:event_MedicoActionPerformed
+
+    private void PacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PacienteActionPerformed
+       
+        Paciente PA = new Paciente();
+           PA.setVisible(true);
+           dispose();
+    }//GEN-LAST:event_PacienteActionPerformed
+
+    private void TurnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TurnosActionPerformed
+      Turno TU = new Turno();
+           TU.setVisible(true);
+           dispose();
+    }//GEN-LAST:event_TurnosActionPerformed
+
+    private void AdministracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdministracionActionPerformed
+        RegistroUsuario RE = new RegistroUsuario();
+           RE.setVisible(true);
+           dispose();
+    }//GEN-LAST:event_AdministracionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +258,15 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ARS;
+    private javax.swing.JButton Administracion;
+    private javax.swing.JButton Disponibilidad;
+    private javax.swing.JLabel Fondo;
+    private javax.swing.JButton Medico;
+    private javax.swing.JButton Paciente;
+    private javax.swing.JButton Salir;
+    private javax.swing.JButton Turnos;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
