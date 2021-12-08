@@ -267,7 +267,7 @@ ResultSet Res;
                 ConPacActionPerformed(evt);
             }
         });
-        jPanel1.add(ConPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 20, 80, -1));
+        jPanel1.add(ConPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, 90, -1));
 
         EdiPac.setText("Editar");
         EdiPac.addActionListener(new java.awt.event.ActionListener() {

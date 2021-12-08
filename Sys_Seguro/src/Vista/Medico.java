@@ -78,7 +78,7 @@ public void Limpiar(){
         jLabel11 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         GuaMed = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        ConMed = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         NomMed = new javax.swing.JTextField();
         EspMed = new javax.swing.JComboBox<>();
@@ -223,8 +223,13 @@ public void Limpiar(){
         });
         jPanel1.add(GuaMed, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, 80, -1));
 
-        jButton2.setText("Consultar");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 20, 90, -1));
+        ConMed.setText("Consultar");
+        ConMed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConMedActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ConMed, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 20, 90, -1));
 
         jLabel12.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
@@ -416,6 +421,55 @@ public void Limpiar(){
         // TODO add your handling code here:
     }//GEN-LAST:event_IdMedicoActionPerformed
 
+    private void ConMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConMedActionPerformed
+
+        // TODO add your handling code here:
+        
+                 Connection Conexion = null;
+                 DbConexion obj = new DbConexion();
+                 
+        try{
+
+            Conexion = obj.getConexion();
+
+            ps = Conexion.prepareStatement("SELECT *FROM Medicos WHERE Codigo = ? OR Nombres = ?");
+            ps.setString(1, CodMed.getText());
+            ps.setString(3, NomMed.getText());
+            Res = ps.executeQuery();
+
+            if(Res.next()){
+
+                IdMedico.setText(Res.getString("idMedicos"));
+                CodMed.setText(Res.getString("Codigo"));
+                CedMed.setText(Res.getString("Cedula"));
+                NomMed.setText(Res.getString("Nombres"));
+                ApeMed.setText(Res.getString("Apellidos"));
+                HorIni.setText(Res.getString("HoraEntrada"));
+                HorFin.setText(Res.getString("HoraSalida"));
+                CelMed.setText(Res.getString("Telefono"));
+                DirMed.setText(Res.getString("Direccion"));
+                SexMed.setSelectedItem(Res.getString("Sexo"));
+                TurMax.setText(Res.getString("TurnosMaximo"));
+                EspMed.setSelectedItem(Res.getString("Especialidad"));
+ 
+            }else{
+
+                JOptionPane.showMessageDialog(null, "No existe Medico asociado a ese codigo");
+
+            }
+
+        }catch(Exception e){
+
+            JOptionPane.showMessageDialog(null, e);
+        }
+
+        
+        
+
+
+  
+    }//GEN-LAST:event_ConMedActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -457,6 +511,7 @@ public void Limpiar(){
     private javax.swing.JTextField CedMed;
     private javax.swing.JTextField CelMed;
     private javax.swing.JTextField CodMed;
+    private javax.swing.JButton ConMed;
     private javax.swing.JTextField DirMed;
     private javax.swing.JComboBox<String> EspMed;
     private javax.swing.JButton GuaMed;
@@ -473,7 +528,6 @@ public void Limpiar(){
     private javax.swing.JTextField TurMax;
     private javax.swing.JRadioButton ViernesMedico;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
