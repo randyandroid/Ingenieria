@@ -4,12 +4,20 @@
  */
 package Vista;
 
+import Modelo.DbConexion;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Matias
  */
 public class Ars extends javax.swing.JFrame {
 
+PreparedStatement ps;
+ResultSet Res;
     /**
      * Creates new form Paciente
      */
@@ -29,18 +37,16 @@ public class Ars extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
+        ApeArs = new javax.swing.JTextField();
+        CedArs = new javax.swing.JTextField();
+        CelArs = new javax.swing.JTextField();
+        TelArs = new javax.swing.JTextField();
+        FechNac = new javax.swing.JTextField();
+        OcuArs = new javax.swing.JTextField();
+        TipPlan = new javax.swing.JTextField();
+        NomBus = new javax.swing.JTextField();
+        NssBus = new javax.swing.JTextField();
+        CobCon = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -49,10 +55,24 @@ public class Ars extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        NomArs = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        CobArs = new javax.swing.JTextField();
+        CobCli = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        SexArs = new javax.swing.JComboBox<>();
+        jLabel10 = new javax.swing.JLabel();
+        CodArs = new javax.swing.JTextField();
+        NumArs = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        BusArs = new javax.swing.JButton();
+        IdArs = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        ArsNom = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,94 +86,88 @@ public class Ars extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 57, -1));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        ApeArs.setEditable(false);
+        ApeArs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                ApeArsActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 150, 30));
+        jPanel1.add(ApeArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 150, 30));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        CedArs.setEditable(false);
+        CedArs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                CedArsActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 150, 30));
+        jPanel1.add(CedArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 150, 30));
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        CelArs.setEditable(false);
+        CelArs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                CelArsActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 150, 30));
+        jPanel1.add(CelArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 150, 30));
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        TelArs.setEditable(false);
+        TelArs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                TelArsActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 150, 30));
+        jPanel1.add(TelArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 150, 30));
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        FechNac.setEditable(false);
+        FechNac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                FechNacActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 150, 30));
+        jPanel1.add(FechNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 150, 30));
 
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        OcuArs.setEditable(false);
+        OcuArs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                OcuArsActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 150, 30));
+        jPanel1.add(OcuArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 150, 30));
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        TipPlan.setEditable(false);
+        TipPlan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                TipPlanActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, 150, 30));
+        jPanel1.add(TipPlan, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 130, 150, 30));
 
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        NomBus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                NomBusActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 150, 30));
+        jPanel1.add(NomBus, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, 150, 30));
 
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        NssBus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                NssBusActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 150, 30));
+        jPanel1.add(NssBus, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, 150, 30));
 
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        CobCon.setEditable(false);
+        CobCon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                CobConActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 150, 30));
-
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, 150, 30));
-
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, 150, 30));
+        jPanel1.add(CobCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 380, 150, 30));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Nombre:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 70, 20));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 440, 70, 20));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
@@ -190,25 +204,112 @@ public class Ars extends javax.swing.JFrame {
         jLabel9.setText("Sexo:");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, 40, 20));
 
-        jLabel10.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel10.setText("Tipificación:");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 80, 20));
-
         jLabel11.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel11.setText("Historial Clínico:");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 110, 20));
+        jLabel11.setText("Tipo Plan");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 140, 110, 20));
 
         jLabel12.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("NSS:");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 220, 60, -1));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 480, 60, -1));
 
         jLabel13.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel13.setText("ARS:");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 50, 20));
+        jLabel13.setText("Cobertura Consultas");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, 180, 20));
+
+        NomArs.setEditable(false);
+        NomArs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NomArsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NomArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, 150, 30));
+
+        jLabel14.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel14.setText("ARS:");
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, 50, 20));
+
+        jLabel15.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel15.setText("Cobertura Medicamentos");
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 160, 20));
+
+        CobArs.setEditable(false);
+        CobArs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CobArsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CobArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, 150, 30));
+
+        CobCli.setEditable(false);
+        CobCli.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CobCliActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CobCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 330, 150, 30));
+
+        jLabel16.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel16.setText("Cobertura Clinica");
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, 180, 20));
+
+        SexArs.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona", "Masculino", "Femenino" }));
+        jPanel1.add(SexArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, 140, -1));
+
+        jLabel10.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("Codigo");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 70, 20));
+
+        CodArs.setEditable(false);
+        CodArs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CodArsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CodArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 80, 30));
+
+        NumArs.setEditable(false);
+        NumArs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NumArsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NumArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 180, 150, 30));
+
+        jLabel17.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel17.setText("NSS:");
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, 60, -1));
+
+        BusArs.setText("Buscar");
+        BusArs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BusArsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BusArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 460, 90, -1));
+
+        IdArs.setEditable(false);
+        jPanel1.add(IdArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, 50, -1));
+
+        jLabel18.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel18.setText("Nombre:");
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 70, 20));
+
+        ArsNom.setEditable(false);
+        ArsNom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ArsNomActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ArsNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 150, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -228,59 +329,126 @@ public class Ars extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void CobCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CobCliActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CobCliActionPerformed
+
+    private void CobArsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CobArsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CobArsActionPerformed
+
+    private void NomArsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomArsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NomArsActionPerformed
+
+    private void CobConActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CobConActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CobConActionPerformed
+
+    private void NssBusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NssBusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NssBusActionPerformed
+
+    private void NomBusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomBusActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NomBusActionPerformed
+
+    private void TipPlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TipPlanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TipPlanActionPerformed
+
+    private void OcuArsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OcuArsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OcuArsActionPerformed
+
+    private void FechNacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FechNacActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FechNacActionPerformed
+
+    private void TelArsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TelArsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TelArsActionPerformed
+
+    private void CedArsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedArsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CedArsActionPerformed
+
+    private void ApeArsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApeArsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ApeArsActionPerformed
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    Inicio obj = new Inicio();
-           obj.setVisible(true);
-           dispose();
+        Inicio obj = new Inicio();
+        obj.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void CodArsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CodArsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_CodArsActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void NumArsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NumArsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_NumArsActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void CelArsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CelArsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_CelArsActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void BusArsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BusArsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+        
+        Connection Conexion = null;
+        DbConexion obj = new DbConexion();
+         
+        try{
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+            Conexion = obj.getConexion();
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+            ps = Conexion.prepareStatement("SELECT *FROM ARS WHERE  Nombre = ? OR Numero = ?");
+            ps.setString(1, NomBus.getText());
+            ps.setString(2, NssBus.getText());
+            Res = ps.executeQuery();
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+            if(Res.next()){
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+                IdArs.setText(Res.getString("idArs"));
+                CodArs.setText(Res.getString("Codigo"));
+                ArsNom.setText(Res.getString("Nombre"));
+                ApeArs.setText(Res.getString("Apellido"));
+                CedArs.setText(Res.getString("Cedula"));
+                CelArs.setText(Res.getString("Celular"));
+                TelArs.setText(Res.getString("Telefono"));
+                FechNac.setText(Res.getString("Fecha"));
+                OcuArs.setText(Res.getString("Ocupacion"));
+                SexArs.setSelectedItem(Res.getString("Sexo"));
+                TipPlan.setText(Res.getString("Tipo"));
+                NumArs.setText(Res.getString("Numero"));
+                NomArs.setText(Res.getString("Ars"));
+                CobArs.setText(Res.getString("CobMed"));
+                CobCli.setText(Res.getString("CobClin"));
+                CobCon.setText(Res.getString("CobCon"));
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+            }else{
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+                JOptionPane.showMessageDialog(null, "No existe paciente asociado a ese codigo");
 
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
+            }
 
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+        }catch(Exception e){
+
+            JOptionPane.showMessageDialog(null, e);
+        }
+
+        
+        
+        
+        
+    }//GEN-LAST:event_BusArsActionPerformed
+
+    private void ArsNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ArsNomActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_ArsNomActionPerformed
 
     /**
      * @param args the command line arguments
@@ -319,11 +487,35 @@ public class Ars extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField ApeArs;
+    private javax.swing.JTextField ArsNom;
+    private javax.swing.JButton BusArs;
+    private javax.swing.JTextField CedArs;
+    private javax.swing.JTextField CelArs;
+    private javax.swing.JTextField CobArs;
+    private javax.swing.JTextField CobCli;
+    private javax.swing.JTextField CobCon;
+    private javax.swing.JTextField CodArs;
+    private javax.swing.JTextField FechNac;
+    private javax.swing.JTextField IdArs;
+    private javax.swing.JTextField NomArs;
+    private javax.swing.JTextField NomBus;
+    private javax.swing.JTextField NssBus;
+    private javax.swing.JTextField NumArs;
+    private javax.swing.JTextField OcuArs;
+    private javax.swing.JComboBox<String> SexArs;
+    private javax.swing.JTextField TelArs;
+    private javax.swing.JTextField TipPlan;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -333,17 +525,5 @@ public class Ars extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
