@@ -19,6 +19,8 @@ public class DbUsuarios {
     private String nombre;
     private String email;
     private int id_Tipo;
+    private String nombre_tipo;
+    
 
     public int getId() {
         return id;
@@ -66,6 +68,14 @@ public class DbUsuarios {
 
     public void setId_Tipo(int id_Tipo) {
         this.id_Tipo = id_Tipo;
+    }
+
+    public String getNombre_tipo() {
+        return nombre_tipo;
+    }
+
+    public void setNombre_tipo(String nombre_tipo) {
+        this.nombre_tipo = nombre_tipo;
     }
 
     

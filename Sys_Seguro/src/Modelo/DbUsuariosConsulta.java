@@ -82,7 +82,7 @@ public class DbUsuariosConsulta extends DbConexion{
      ResultSet rs = null;
      Connection Conexion = (Connection) getConexion();
      
-     String sql = "SELECT idUsuarios, usuario, password,Nombre,id_Tipo FROM usuarios WHERE usuario = ? ";
+     String sql = "SELECT u.idUsuarios, u.usuario, u.password,u.Nombre,u.id_Tipo,t.Nombre FROM usuarios AS u INNER JOIN tipo_usuario AS t ON u.id_Tipo=t.id WHERE usuario = ? ";
      
      
          
@@ -99,7 +99,7 @@ public class DbUsuariosConsulta extends DbConexion{
                  usr.setId(rs.getInt(1));
                  usr.setNombre(rs.getString(4));
                  usr.setId_Tipo(rs.getInt(5));
-                 
+                 usr.setNombre_tipo(rs.getString(6));
                  return true;
                  
              }else{

@@ -4,18 +4,47 @@
  */
 package Vista;
 
+import Modelo.DbConexion;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+
 /**
- *
+ *Hor
  * @author Matias
  */
 public class Medico extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Paciente
-     */
+PreparedStatement ps;
+ResultSet Res;
+
+
+
+public void Limpiar(){
+        
+    CodMed.setText(null);
+    NomMed.setText(null);
+    ApeMed.setText(null);
+    CedMed.setText(null);
+    CelMed.setText(null);
+    DirMed.setText(null);
+    HorIni.setText(null);
+    HorFin.setText(null);
+    //SexMed.(null);
+    DirMed.setText(null);
+    TurMax.setText(null);
+  
+
+        
+    }
+
+
+
     public Medico() {
         initComponents();
          this.setLocationRelativeTo(null);
+         IdMedico.setVisible(false);
     }
 
     /**
@@ -27,42 +56,365 @@ public class Medico extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        ApeMed = new javax.swing.JTextField();
+        CedMed = new javax.swing.JTextField();
+        CelMed = new javax.swing.JTextField();
+        DirMed = new javax.swing.JTextField();
+        HorIni = new javax.swing.JTextField();
+        HorFin = new javax.swing.JTextField();
+        TurMax = new javax.swing.JTextField();
+        CodMed = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        GuaMed = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        NomMed = new javax.swing.JTextField();
+        EspMed = new javax.swing.JComboBox<>();
+        SexMed = new javax.swing.JComboBox<>();
+        LunesMedico = new javax.swing.JRadioButton();
+        MartesMedico = new javax.swing.JRadioButton();
+        MiercolesMedico = new javax.swing.JRadioButton();
+        SabadoMedico = new javax.swing.JRadioButton();
+        ViernesMedico = new javax.swing.JRadioButton();
+        JuevesMedico = new javax.swing.JRadioButton();
+        jLabel14 = new javax.swing.JLabel();
+        IdMedico = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("jButton1");
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setText("Atras");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 57, -1));
+
+        ApeMed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ApeMedActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ApeMed, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 150, 30));
+
+        CedMed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CedMedActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CedMed, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 150, 30));
+
+        CelMed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CelMedActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CelMed, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 150, 30));
+
+        DirMed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DirMedActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DirMed, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 150, 30));
+
+        HorIni.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HorIniActionPerformed(evt);
+            }
+        });
+        jPanel1.add(HorIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 150, 30));
+
+        HorFin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HorFinActionPerformed(evt);
+            }
+        });
+        jPanel1.add(HorFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 150, 30));
+
+        TurMax.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TurMaxActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TurMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 150, 30));
+
+        CodMed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CodMedActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CodMed, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 150, 30));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Codigo Médico:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 100, 20));
+
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Apellido Médico:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 100, 20));
+
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Cédula:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 60, 20));
+
+        jLabel5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Celular:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 60, 20));
+
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Hora Inicio:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 90, 20));
+
+        jLabel7.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("Dirección:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 80, 20));
+
+        jLabel8.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("Hora Fin:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 70, 20));
+
+        jLabel9.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setText("Sexo:");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, 40, 20));
+
+        jLabel10.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("Especialidad:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, 90, 20));
+
+        jLabel11.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("Turno Maximo:");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 110, 20));
+
+        jLabel13.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setText("Dias Laborables:");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 100, 20));
+
+        GuaMed.setText("Guardar");
+        GuaMed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GuaMedActionPerformed(evt);
+            }
+        });
+        jPanel1.add(GuaMed, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, 80, -1));
+
+        jButton2.setText("Consultar");
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 20, 90, -1));
+
+        jLabel12.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel12.setText("Nombre Médico:");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 100, 20));
+
+        NomMed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NomMedActionPerformed(evt);
+            }
+        });
+        jPanel1.add(NomMed, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 150, 30));
+
+        EspMed.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona\t", "Pediatra", "Internista", "Cardiologo", "General", "Otorrino", "Ortepeda", "Endocrinologo", "Estomatologo", "Odontologo", "Cirujano", " " }));
+        EspMed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EspMedActionPerformed(evt);
+            }
+        });
+        jPanel1.add(EspMed, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 130, 140, -1));
+
+        SexMed.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona", "Masculino", "Femenino" }));
+        jPanel1.add(SexMed, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 100, 140, -1));
+
+        LunesMedico.setText("Lunes");
+        LunesMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LunesMedicoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(LunesMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, -1, -1));
+
+        MartesMedico.setText("Martes");
+        jPanel1.add(MartesMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 310, -1, -1));
+
+        MiercolesMedico.setText("Miércoles");
+        jPanel1.add(MiercolesMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 310, -1, -1));
+
+        SabadoMedico.setText("Sábado");
+        jPanel1.add(SabadoMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 350, -1, -1));
+
+        ViernesMedico.setText("Viernes");
+        ViernesMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViernesMedicoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ViernesMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 350, -1, -1));
+
+        JuevesMedico.setText("Jueves");
+        jPanel1.add(JuevesMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 350, -1, -1));
+
+        jLabel14.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel14.setText("Hora Fin:");
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 70, 20));
+
+        IdMedico.setEditable(false);
+        IdMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IdMedicoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(IdMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 20, 40, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(102, 102, 102)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(482, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 802, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addComponent(jButton1)
-                .addContainerGap(361, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      Inicio obj = new Inicio();
+    Inicio obj = new Inicio();
            obj.setVisible(true);
            dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void ApeMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApeMedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ApeMedActionPerformed
+
+    private void CedMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedMedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CedMedActionPerformed
+
+    private void CelMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CelMedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CelMedActionPerformed
+
+    private void DirMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DirMedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DirMedActionPerformed
+
+    private void HorIniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HorIniActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HorIniActionPerformed
+
+    private void HorFinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HorFinActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HorFinActionPerformed
+
+    private void TurMaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TurMaxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TurMaxActionPerformed
+
+    private void CodMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CodMedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CodMedActionPerformed
+
+    private void NomMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomMedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NomMedActionPerformed
+
+    private void EspMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EspMedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EspMedActionPerformed
+
+    private void LunesMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LunesMedicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LunesMedicoActionPerformed
+
+    private void ViernesMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViernesMedicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ViernesMedicoActionPerformed
+
+    private void GuaMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuaMedActionPerformed
+        // TODO add your handling code here:
+        
+        
+        Connection Conexion = null;
+        
+      DbConexion obj = new DbConexion();
+        
+        try{
+            
+            Conexion = obj.getConexion();
+            ps = Conexion.prepareStatement("INSERT INTO Medicos(Codigo,Cedula,Nombres,Apellidos,HoraEntrada,HoraSalida,Telefono,Direccion,Sexo,TurnosMaximo,Especialidad) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+            ps.setString(1,CodMed.getText());
+            ps.setString(2,CedMed.getText());
+            ps.setString(3,NomMed.getText());
+            ps.setString(4, ApeMed.getText());
+            ps.setString(5, HorIni.getText());
+            ps.setString(6,HorFin.getText());
+            ps.setString(7,CelMed.getText());
+            ps.setString(8,DirMed.getText());
+            ps.setString(9,SexMed.getSelectedItem().toString());
+            ps.setString(10,TurMax.getText());
+            ps.setString(11,EspMed.getSelectedItem().toString());
+            
+           int res =  ps.executeUpdate();
+           
+           if(res>0){
+               
+               JOptionPane.showMessageDialog(null, "DATOS GUARDADOS. ");
+               Limpiar();
+               
+           }else{
+               JOptionPane.showMessageDialog(null, "ERROR AL GUARDAR. ");
+           }
+            
+            Conexion.close();
+            
+            
+            
+        }catch(Exception e){
+            
+            JOptionPane.showMessageDialog(null, e);
+        }
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_GuaMedActionPerformed
+
+    private void IdMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IdMedicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_IdMedicoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -101,6 +453,40 @@ public class Medico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField ApeMed;
+    private javax.swing.JTextField CedMed;
+    private javax.swing.JTextField CelMed;
+    private javax.swing.JTextField CodMed;
+    private javax.swing.JTextField DirMed;
+    private javax.swing.JComboBox<String> EspMed;
+    private javax.swing.JButton GuaMed;
+    private javax.swing.JTextField HorFin;
+    private javax.swing.JTextField HorIni;
+    private javax.swing.JTextField IdMedico;
+    private javax.swing.JRadioButton JuevesMedico;
+    private javax.swing.JRadioButton LunesMedico;
+    private javax.swing.JRadioButton MartesMedico;
+    private javax.swing.JRadioButton MiercolesMedico;
+    private javax.swing.JTextField NomMed;
+    private javax.swing.JRadioButton SabadoMedico;
+    private javax.swing.JComboBox<String> SexMed;
+    private javax.swing.JTextField TurMax;
+    private javax.swing.JRadioButton ViernesMedico;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

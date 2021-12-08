@@ -5,11 +5,15 @@
  */
 package Vista;
 
+import Modelo.DbUsuarios;
+
 /**
  *
  * @author adm
  */
 public class Inicio extends javax.swing.JFrame {
+    
+    DbUsuarios ModeloUsuario;
 
     /**
      * Creates new form Inicio
@@ -17,6 +21,32 @@ public class Inicio extends javax.swing.JFrame {
     public Inicio() {
         initComponents();
           this.setLocationRelativeTo(null);
+    }
+    
+    public Inicio(DbUsuarios ModeloUsuario){ //constructor para iniciar el login
+        
+        initComponents();
+        setLocationRelativeTo(null);
+        this.ModeloUsuario = ModeloUsuario;
+        LbNombre.setText(ModeloUsuario.getNombre());
+        LbRol.setText(ModeloUsuario.getNombre_tipo());
+        
+        
+        
+        if(ModeloUsuario.getId_Tipo()==1){
+            
+            
+            
+            
+        }else if(ModeloUsuario.getId_Tipo()==2){
+            
+            Administracion.setVisible(false);
+           
+            
+            
+            
+        }
+        
     }
 
     /**
@@ -37,6 +67,8 @@ public class Inicio extends javax.swing.JFrame {
         ARS = new javax.swing.JButton();
         Turnos = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        LbNombre = new javax.swing.JLabel();
+        LbRol = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -161,6 +193,8 @@ public class Inicio extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cooltext399528988127163.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 20, 650, 70));
+        jPanel1.add(LbNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 60, 10));
+        jPanel1.add(LbRol, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 30, 60, 10));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo menu.png"))); // NOI18N
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 680));
@@ -262,6 +296,8 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JButton Administracion;
     private javax.swing.JButton Disponibilidad;
     private javax.swing.JLabel Fondo;
+    private javax.swing.JLabel LbNombre;
+    private javax.swing.JLabel LbRol;
     private javax.swing.JButton Medico;
     private javax.swing.JButton Paciente;
     private javax.swing.JButton Salir;

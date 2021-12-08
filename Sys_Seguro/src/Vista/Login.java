@@ -1,4 +1,6 @@
 /*
+
+
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -14,6 +16,8 @@ import javax.swing.JOptionPane;
 
 
 public class Login extends javax.swing.JFrame {
+
+    DbUsuarios ModeloUsuario;
 
     /**
      * Creates new form Login
@@ -121,23 +125,32 @@ public class Login extends javax.swing.JFrame {
             objx.setUsuario(UsuLog.getText());
             objx.setPassword(NuevoPass);
             
+            
             if(objy.Login(objx)){
+                // DbUsuarios ModeloUsuario = null;
+                 //DbUsuarios ModeloUsuario;
                 
         
-           Inicio obj = new Inicio();
+           Inicio obj = new Inicio(objx);
            obj.setVisible(true);
            dispose();
                 
                 
-            }else{
+            }//fin del if
+            
+            else{
                 JOptionPane.showMessageDialog(null, "los datos son incorrectos");
-            }
+            }//fin del else
+            
              
-         }else{
+         }//fin del if
+         
+         else{
             JOptionPane.showMessageDialog(null, "los datos estan vacios");
-        }
+        }//fin del else
  
-          
+        
+         //fin del boton
     }//GEN-LAST:event_btnEntLogActionPerformed
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed

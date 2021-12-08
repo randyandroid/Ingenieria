@@ -47,6 +47,8 @@ public class RegistroUsuario extends javax.swing.JFrame {
         btnSalirReg = new javax.swing.JButton();
         PwdReg = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
+        CmbTipoUsuario = new javax.swing.JComboBox<>();
+        NombreRegristro4 = new javax.swing.JLabel();
         Rg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,8 +68,8 @@ public class RegistroUsuario extends javax.swing.JFrame {
 
         NombreRegristro2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         NombreRegristro2.setForeground(new java.awt.Color(0, 0, 0));
-        NombreRegristro2.setText("Confirmar Contraseña: ");
-        fondo.add(NombreRegristro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 160, -1));
+        NombreRegristro2.setText("Tipo de usuario");
+        fondo.add(NombreRegristro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 160, -1));
 
         UsuarioRegristro.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         UsuarioRegristro.setForeground(new java.awt.Color(0, 0, 0));
@@ -142,6 +144,14 @@ public class RegistroUsuario extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoRg.png"))); // NOI18N
         fondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 130, -1));
+
+        CmbTipoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona", "Administrador", "Usuario" }));
+        fondo.add(CmbTipoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 366, 130, 30));
+
+        NombreRegristro4.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        NombreRegristro4.setForeground(new java.awt.Color(0, 0, 0));
+        NombreRegristro4.setText("Confirmar Contraseña: ");
+        fondo.add(NombreRegristro4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 160, -1));
 
         Rg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo rosa.jpg"))); // NOI18N
         fondo.add(Rg, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 500, 525));
@@ -256,6 +266,8 @@ public class RegistroUsuario extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -267,11 +279,13 @@ public class RegistroUsuario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ApellidoRegristro;
+    private javax.swing.JComboBox<String> CmbTipoUsuario;
     private javax.swing.JTextField EmaReg;
     private javax.swing.JTextField NomReg;
     private javax.swing.JLabel NombreRegristro;
     private javax.swing.JLabel NombreRegristro2;
     private javax.swing.JLabel NombreRegristro3;
+    private javax.swing.JLabel NombreRegristro4;
     private javax.swing.JPasswordField PwdReg;
     private javax.swing.JPasswordField RepPwd;
     private javax.swing.JLabel Rg;
