@@ -41,7 +41,7 @@ public class Inicio extends javax.swing.JFrame {
         }else if(ModeloUsuario.getId_Tipo()==2){
             
             Administracion.setVisible(false);
-           
+            Medico.setVisible(false);
             
             
             
@@ -192,9 +192,11 @@ public class Inicio extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cooltext399528988127163.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 20, 650, 70));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 650, 70));
         jPanel1.add(LbNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 60, 10));
-        jPanel1.add(LbRol, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 30, 60, 10));
+
+        LbRol.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jPanel1.add(LbRol, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 320, 30));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo menu.png"))); // NOI18N
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 680));
@@ -214,9 +216,9 @@ public class Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
-    
-        
-        dispose();
+      Login DP = new Login();
+           DP.setVisible(true);
+           dispose();
     }//GEN-LAST:event_SalirActionPerformed
 
     private void DisponibilidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DisponibilidadActionPerformed

@@ -73,6 +73,7 @@ ResultSet Res;
         IdArs = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         ArsNom = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -140,7 +141,7 @@ ResultSet Res;
                 TipPlanActionPerformed(evt);
             }
         });
-        jPanel1.add(TipPlan, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 130, 150, 30));
+        jPanel1.add(TipPlan, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 130, 150, 30));
 
         NomBus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,11 +163,11 @@ ResultSet Res;
                 CobConActionPerformed(evt);
             }
         });
-        jPanel1.add(CobCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 380, 150, 30));
+        jPanel1.add(CobCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 390, 150, 30));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Nombre:");
+        jLabel2.setText("Cedula");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 440, 70, 20));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -199,15 +200,15 @@ ResultSet Res;
         jLabel8.setText("Fecha Nacimiento:");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 120, 20));
 
-        jLabel9.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("Sexo:");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, 40, 20));
+        jLabel9.setText("ARS");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 80, 30));
 
         jLabel11.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Tipo Plan");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 140, 110, 20));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 140, 60, 20));
 
         jLabel12.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
@@ -217,7 +218,7 @@ ResultSet Res;
         jLabel13.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Cobertura Consultas");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, 180, 20));
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 400, 140, 20));
 
         NomArs.setEditable(false);
         NomArs.addActionListener(new java.awt.event.ActionListener() {
@@ -225,17 +226,17 @@ ResultSet Res;
                 NomArsActionPerformed(evt);
             }
         });
-        jPanel1.add(NomArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, 150, 30));
+        jPanel1.add(NomArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, 150, 30));
 
         jLabel14.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("ARS:");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, 50, 20));
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 240, 50, 20));
 
         jLabel15.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Cobertura Medicamentos");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 160, 20));
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 290, 160, 20));
 
         CobArs.setEditable(false);
         CobArs.addActionListener(new java.awt.event.ActionListener() {
@@ -243,7 +244,7 @@ ResultSet Res;
                 CobArsActionPerformed(evt);
             }
         });
-        jPanel1.add(CobArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, 150, 30));
+        jPanel1.add(CobArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 280, 150, 30));
 
         CobCli.setEditable(false);
         CobCli.addActionListener(new java.awt.event.ActionListener() {
@@ -251,15 +252,15 @@ ResultSet Res;
                 CobCliActionPerformed(evt);
             }
         });
-        jPanel1.add(CobCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 330, 150, 30));
+        jPanel1.add(CobCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 330, 150, 30));
 
         jLabel16.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("Cobertura Clinica");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, 180, 20));
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, 120, 20));
 
         SexArs.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona", "Masculino", "Femenino" }));
-        jPanel1.add(SexArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, 140, -1));
+        jPanel1.add(SexArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 80, 140, -1));
 
         jLabel10.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
@@ -280,12 +281,12 @@ ResultSet Res;
                 NumArsActionPerformed(evt);
             }
         });
-        jPanel1.add(NumArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 180, 150, 30));
+        jPanel1.add(NumArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 180, 150, 30));
 
         jLabel17.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setText("NSS:");
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, 60, -1));
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 50, -1));
 
         BusArs.setText("Buscar");
         BusArs.addActionListener(new java.awt.event.ActionListener() {
@@ -293,10 +294,10 @@ ResultSet Res;
                 BusArsActionPerformed(evt);
             }
         });
-        jPanel1.add(BusArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 460, 90, -1));
+        jPanel1.add(BusArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 550, 110, 40));
 
         IdArs.setEditable(false);
-        jPanel1.add(IdArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, 50, -1));
+        jPanel1.add(IdArs, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, 50, -1));
 
         jLabel18.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(0, 0, 0));
@@ -311,19 +312,20 @@ ResultSet Res;
         });
         jPanel1.add(ArsNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 150, 30));
 
+        jLabel19.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel19.setText("Sexo:");
+        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 80, 40, 20));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 802, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 937, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE)
         );
 
         pack();
@@ -405,7 +407,7 @@ ResultSet Res;
 
             Conexion = obj.getConexion();
 
-            ps = Conexion.prepareStatement("SELECT *FROM ARS WHERE  Nombre = ? OR Numero = ?");
+            ps = Conexion.prepareStatement("SELECT *FROM ARS WHERE  Cedula = ? OR Numero = ?");
             ps.setString(1, NomBus.getText());
             ps.setString(2, NssBus.getText());
             Res = ps.executeQuery();
@@ -516,6 +518,7 @@ ResultSet Res;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

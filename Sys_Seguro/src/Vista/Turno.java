@@ -63,6 +63,7 @@ ResultSet Res;
         GuaTur = new javax.swing.JButton();
         BusTur = new javax.swing.JButton();
         IdTurno = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,100 +82,100 @@ ResultSet Res;
                 PacNomActionPerformed(evt);
             }
         });
-        jPanel1.add(PacNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 150, 30));
+        jPanel1.add(PacNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 150, 30));
 
         MedNom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MedNomActionPerformed(evt);
             }
         });
-        jPanel1.add(MedNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 150, 30));
+        jPanel1.add(MedNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 150, 30));
 
         MedEsp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MedEspActionPerformed(evt);
             }
         });
-        jPanel1.add(MedEsp, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 150, 30));
+        jPanel1.add(MedEsp, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 150, 30));
 
         FechTur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 FechTurActionPerformed(evt);
             }
         });
-        jPanel1.add(FechTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 150, 30));
+        jPanel1.add(FechTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 150, 30));
 
         HorTur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HorTurActionPerformed(evt);
             }
         });
-        jPanel1.add(HorTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 150, 30));
+        jPanel1.add(HorTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, 150, 30));
 
         MonCon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MonConActionPerformed(evt);
             }
         });
-        jPanel1.add(MonCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 150, 30));
+        jPanel1.add(MonCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, 150, 30));
 
         CodTur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CodTurActionPerformed(evt);
             }
         });
-        jPanel1.add(CodTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 150, 30));
+        jPanel1.add(CodTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 150, 30));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Codigo del Turno");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 100, 20));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 100, 20));
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Paciente:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 60, 20));
+        jLabel3.setText("Turno");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, 90, 30));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Médico:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 50, 20));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 50, 20));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Especialidad:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 80, 20));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 80, 20));
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Fecha:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 50, 20));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 50, 20));
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Monto Consulta:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 334, 100, 20));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 100, 20));
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Hora:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 50, 20));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 50, 20));
 
         jLabel9.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Número Turrno:");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 100, 20));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 100, 20));
 
         NumTur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NumTurActionPerformed(evt);
             }
         });
-        jPanel1.add(NumTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 150, 30));
+        jPanel1.add(NumTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 150, 30));
 
         LisTur.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
+                {"TUR01", "01", "Josefa", "Cyndi", "Pediatra", "9:00AM", "Lunes"},
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null}
@@ -188,7 +189,7 @@ ResultSet Res;
             LisTur.getColumnModel().getColumn(0).setPreferredWidth(40);
         }
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 490, 90));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 120, 540, 130));
 
         GuaTur.setText("Guardar");
         GuaTur.addActionListener(new java.awt.event.ActionListener() {
@@ -196,7 +197,7 @@ ResultSet Res;
                 GuaTurActionPerformed(evt);
             }
         });
-        jPanel1.add(GuaTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, -1, -1));
+        jPanel1.add(GuaTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 130, 60));
 
         BusTur.setText("Buscar");
         BusTur.addActionListener(new java.awt.event.ActionListener() {
@@ -204,10 +205,15 @@ ResultSet Res;
                 BusTurActionPerformed(evt);
             }
         });
-        jPanel1.add(BusTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 440, 90, -1));
+        jPanel1.add(BusTur, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 500, 150, 60));
 
         IdTurno.setEditable(false);
-        jPanel1.add(IdTurno, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 60, -1));
+        jPanel1.add(IdTurno, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 60, -1));
+
+        jLabel10.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("Paciente:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 60, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -215,14 +221,14 @@ ResultSet Res;
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 802, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 976, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 621, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -414,6 +420,7 @@ ResultSet Res;
     private javax.swing.JTextField NumTur;
     private javax.swing.JTextField PacNom;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

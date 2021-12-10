@@ -89,6 +89,7 @@ ResultSet Res;
         FechPac = new javax.swing.JTextField();
         ArsPac = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -149,7 +150,7 @@ ResultSet Res;
                 HisPacActionPerformed(evt);
             }
         });
-        jPanel1.add(HisPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 150, 30));
+        jPanel1.add(HisPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 220, 150, 30));
 
         CodPac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,19 +164,19 @@ ResultSet Res;
                 NssPacActionPerformed(evt);
             }
         });
-        jPanel1.add(NssPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, 150, 30));
+        jPanel1.add(NssPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 270, 150, 30));
 
         EmePac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EmePacActionPerformed(evt);
             }
         });
-        jPanel1.add(EmePac, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 310, 160, 30));
+        jPanel1.add(EmePac, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 380, 160, 30));
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Codigo");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 70, 20));
+        jLabel2.setText("Paciente");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, 140, 20));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
@@ -210,33 +211,33 @@ ResultSet Res;
         jLabel9.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Sexo:");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, 40, 20));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 110, 40, 20));
 
         jLabel10.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Tipificación:");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 80, 20));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 160, 80, 20));
 
         jLabel11.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Historial Clínico:");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 110, 20));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, 110, 20));
 
         jLabel12.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("NSS:");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 220, 60, -1));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 280, 60, -1));
 
         jLabel13.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Emergencias:");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 310, 90, 30));
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 380, 90, 30));
 
         SexPac.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona", "Masculino", "Femenino" }));
-        jPanel1.add(SexPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, 120, -1));
+        jPanel1.add(SexPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 110, 120, -1));
 
         TipPac.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona", "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-" }));
-        jPanel1.add(TipPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 130, 130, 30));
+        jPanel1.add(TipPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 160, 130, 30));
 
         jLabel14.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
@@ -256,10 +257,10 @@ ResultSet Res;
                 GuaPacActionPerformed(evt);
             }
         });
-        jPanel1.add(GuaPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, 80, -1));
+        jPanel1.add(GuaPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, 130, 40));
 
         IDpac.setEditable(false);
-        jPanel1.add(IDpac, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 20, 80, -1));
+        jPanel1.add(IDpac, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 60, 80, -1));
 
         ConPac.setText("Consultar");
         ConPac.addActionListener(new java.awt.event.ActionListener() {
@@ -267,7 +268,7 @@ ResultSet Res;
                 ConPacActionPerformed(evt);
             }
         });
-        jPanel1.add(ConPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, 90, -1));
+        jPanel1.add(ConPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 60, 90, -1));
 
         EdiPac.setText("Editar");
         EdiPac.addActionListener(new java.awt.event.ActionListener() {
@@ -275,7 +276,7 @@ ResultSet Res;
                 EdiPacActionPerformed(evt);
             }
         });
-        jPanel1.add(EdiPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 450, 80, -1));
+        jPanel1.add(EdiPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 510, 100, 40));
 
         jLabel15.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
@@ -294,26 +295,27 @@ ResultSet Res;
                 ArsPacActionPerformed(evt);
             }
         });
-        jPanel1.add(ArsPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, 150, 30));
+        jPanel1.add(ArsPac, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 330, 150, 30));
 
         jLabel16.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("ARS:");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 50, 20));
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 50, 20));
+
+        jLabel17.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel17.setText("Codigo");
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 70, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 802, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 997, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 604, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -548,6 +550,7 @@ ResultSet Res;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

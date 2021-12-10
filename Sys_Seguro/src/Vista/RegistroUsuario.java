@@ -46,45 +46,42 @@ public class RegistroUsuario extends javax.swing.JFrame {
         btnRegistrarReg = new javax.swing.JButton();
         btnSalirReg = new javax.swing.JButton();
         PwdReg = new javax.swing.JPasswordField();
-        jLabel2 = new javax.swing.JLabel();
         CmbTipoUsuario = new javax.swing.JComboBox<>();
         NombreRegristro4 = new javax.swing.JLabel();
-        Rg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         NombreRegristro.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         NombreRegristro.setForeground(new java.awt.Color(0, 0, 0));
         NombreRegristro.setText("Nombre: ");
-        fondo.add(NombreRegristro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+        fondo.add(NombreRegristro, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, -1, -1));
 
         ApellidoRegristro.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         ApellidoRegristro.setForeground(new java.awt.Color(0, 0, 0));
         ApellidoRegristro.setText("Correo:");
-        fondo.add(ApellidoRegristro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
+        fondo.add(ApellidoRegristro, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
 
         NombreRegristro2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         NombreRegristro2.setForeground(new java.awt.Color(0, 0, 0));
         NombreRegristro2.setText("Tipo de usuario");
-        fondo.add(NombreRegristro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 160, -1));
+        fondo.add(NombreRegristro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, 160, -1));
 
         UsuarioRegristro.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         UsuarioRegristro.setForeground(new java.awt.Color(0, 0, 0));
         UsuarioRegristro.setText("Usuario :");
-        fondo.add(UsuarioRegristro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+        fondo.add(UsuarioRegristro, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
 
         NombreRegristro3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         NombreRegristro3.setForeground(new java.awt.Color(0, 0, 0));
         NombreRegristro3.setText("Contraseña : ");
-        fondo.add(NombreRegristro3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
+        fondo.add(NombreRegristro3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, -1, -1));
 
         xxx.setFont(new java.awt.Font("Bodoni MT", 1, 36)); // NOI18N
         xxx.setForeground(new java.awt.Color(0, 0, 0));
         xxx.setText("Registro ");
-        fondo.add(xxx, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, -1, -1));
+        fondo.add(xxx, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, -1, -1));
 
         UsuReg.setBackground(new java.awt.Color(255, 255, 255));
         UsuReg.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -94,7 +91,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
                 UsuRegActionPerformed(evt);
             }
         });
-        fondo.add(UsuReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 220, -1));
+        fondo.add(UsuReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 250, 220, -1));
 
         EmaReg.setBackground(new java.awt.Color(255, 255, 255));
         EmaReg.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -104,7 +101,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
                 EmaRegActionPerformed(evt);
             }
         });
-        fondo.add(EmaReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 220, -1));
+        fondo.add(EmaReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 200, 220, -1));
 
         NomReg.setBackground(new java.awt.Color(255, 255, 255));
         NomReg.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -114,12 +111,12 @@ public class RegistroUsuario extends javax.swing.JFrame {
                 NomRegActionPerformed(evt);
             }
         });
-        fondo.add(NomReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 220, -1));
+        fondo.add(NomReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, 220, -1));
 
         RepPwd.setBackground(new java.awt.Color(255, 255, 255));
         RepPwd.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         RepPwd.setForeground(new java.awt.Color(0, 0, 0));
-        fondo.add(RepPwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 220, -1));
+        fondo.add(RepPwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 220, -1));
 
         btnRegistrarReg.setText("Registrar");
         btnRegistrarReg.addActionListener(new java.awt.event.ActionListener() {
@@ -127,44 +124,42 @@ public class RegistroUsuario extends javax.swing.JFrame {
                 btnRegistrarRegActionPerformed(evt);
             }
         });
-        fondo.add(btnRegistrarReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 140, 40));
+        fondo.add(btnRegistrarReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 510, 170, 50));
 
-        btnSalirReg.setText("Salir ");
+        btnSalirReg.setText("Atras");
         btnSalirReg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirRegActionPerformed(evt);
             }
         });
-        fondo.add(btnSalirReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 470, 140, 40));
+        fondo.add(btnSalirReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 60, 30));
 
         PwdReg.setBackground(new java.awt.Color(255, 255, 255));
         PwdReg.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         PwdReg.setForeground(new java.awt.Color(0, 0, 0));
-        fondo.add(PwdReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 220, -1));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IconoRg.png"))); // NOI18N
-        fondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 130, -1));
+        fondo.add(PwdReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 300, 220, -1));
 
         CmbTipoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona", "Administrador", "Usuario" }));
-        fondo.add(CmbTipoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 366, 130, 30));
+        fondo.add(CmbTipoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, 130, 30));
 
         NombreRegristro4.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         NombreRegristro4.setForeground(new java.awt.Color(0, 0, 0));
         NombreRegristro4.setText("Confirmar Contraseña: ");
-        fondo.add(NombreRegristro4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 160, -1));
-
-        Rg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo rosa.jpg"))); // NOI18N
-        fondo.add(Rg, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 500, 525));
+        fondo.add(NombreRegristro4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 160, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(fondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 988, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(fondo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 606, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -183,9 +178,9 @@ public class RegistroUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_NomRegActionPerformed
 
     private void btnSalirRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirRegActionPerformed
-           //Login LG = new Login ();
-            //LG.setVisible(true);
-            dispose();
+            Inicio obj = new Inicio();
+           obj.setVisible(true);
+           dispose();
     }//GEN-LAST:event_btnSalirRegActionPerformed
 
     private void btnRegistrarRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarRegActionPerformed
@@ -272,7 +267,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RegistroUsuario().setVisible(true);
+                new Login().setVisible(true);
             }
         });
     }
@@ -288,13 +283,11 @@ public class RegistroUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel NombreRegristro4;
     private javax.swing.JPasswordField PwdReg;
     private javax.swing.JPasswordField RepPwd;
-    private javax.swing.JLabel Rg;
     private javax.swing.JTextField UsuReg;
     private javax.swing.JLabel UsuarioRegristro;
     private javax.swing.JButton btnRegistrarReg;
     private javax.swing.JButton btnSalirReg;
     private javax.swing.JPanel fondo;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel xxx;
     // End of variables declaration//GEN-END:variables
 }
