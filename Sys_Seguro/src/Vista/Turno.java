@@ -175,7 +175,7 @@ ResultSet Res;
 
         LisTur.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"TUR01", "01", "Josefa", "Cyndi", "Pediatra", "9:00AM", "Lunes"},
+                {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null}

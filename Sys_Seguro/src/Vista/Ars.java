@@ -167,7 +167,7 @@ ResultSet Res;
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Cedula");
+        jLabel2.setText("Nombre:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 440, 70, 20));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -407,7 +407,7 @@ ResultSet Res;
 
             Conexion = obj.getConexion();
 
-            ps = Conexion.prepareStatement("SELECT *FROM ARS WHERE  Cedula = ? OR Numero = ?");
+            ps = Conexion.prepareStatement("SELECT *FROM ARS WHERE  Nombre = ? OR Numero = ?");
             ps.setString(1, NomBus.getText());
             ps.setString(2, NssBus.getText());
             Res = ps.executeQuery();

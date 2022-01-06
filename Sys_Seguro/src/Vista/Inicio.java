@@ -41,7 +41,7 @@ public class Inicio extends javax.swing.JFrame {
         }else if(ModeloUsuario.getId_Tipo()==2){
             
             Administracion.setVisible(false);
-            Medico.setVisible(false);
+           
             
             
             
@@ -216,9 +216,9 @@ public class Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
-      Login DP = new Login();
-           DP.setVisible(true);
-           dispose();
+    
+        
+        dispose();
     }//GEN-LAST:event_SalirActionPerformed
 
     private void DisponibilidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DisponibilidadActionPerformed
